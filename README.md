@@ -48,3 +48,19 @@ helm install mimir grafana/mimir-distributed --namespace=mimir
                     resolver coredns.kube-system.svc.cluter.simple.;
                 }
         ```
+- Datastore: Unable to connect with Loki
+    - Edit loki-stack values.yml
+        ```bash
+        # get values.yml
+        helm show values grafana/loki-stack > loki.yaml
+
+        # use the correct image tag
+        loki:
+          ...
+          image:
+            repository: grafana/loki
+            tag: 2.9.3
+
+        # run helm upgrade
+        helm upgrade --install  loki grafana/loki-stack -f loki.yaml -n loki
+        ```
