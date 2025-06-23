@@ -10,7 +10,6 @@ This guide provides step-by-step instructions for deploying a complete logging s
 - [Installation](#installation)
 - [Access Grafana](#access-grafana)
 - [Configure Log Visualization](#configure-log-visualization)
-- [Troubleshooting](#troubleshooting)
 - [References](#references)
 
 ## Prerequisites
